@@ -54,7 +54,7 @@ public class Main {
 
     }*/
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
 
         int e = 1;
         int i = 0;
@@ -114,6 +114,27 @@ public class Main {
                 System.out.println("Sunday");
                 break;
 
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {99,54,37,65,79,12,42,90,23,82};
+        int temp = 0;
+        boolean exit = false;
+
+        while(!exit){
+            exit = true;
+            for (int i=0; i<nums.length - 1; i++){
+                if(nums[i] > nums[i+1]){
+                    exit = false;
+                    temp = nums[i];
+                    nums[i] = nums[i+1];
+                    nums[i+1] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < nums.length; i++){
+            System.out.print((nums[i] + " "));
         }
     }
 
